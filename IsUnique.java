@@ -1,7 +1,7 @@
 /* Eeshan Londhe
  * Checks to see if a given string has all unique characters.
  * Used HashSet to make it O(n) time. Without use of data structure, time complexity would be O(n^2)
-*/
+ */
 
 import java.util.*;
 
