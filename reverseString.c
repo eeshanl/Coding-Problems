@@ -3,7 +3,6 @@
  */
 
 #include <stdio.h>
-#include <string.h>
 
 void reverseString(char* str);
 
@@ -16,13 +15,15 @@ int main(int argc, char** argv) {
 }
 
 void reverseString(char* str) {
-  char* front = &str[0];
-  char* back = &str[strlen(str) - 1];
-  for (int i = 0; i < strlen(str) / 2; i++) {
+  char* front = str;
+  char* back = front;
+  while (*back != '\0') {
+    back++;
+  }
+  back--;
+  while (front < back) {
     char backTemp = *front;
-    *front = *back;
-    *back = backTemp;
-    front++;
-    back--;
+    *front++ = *back;
+    *back-- = backTemp;
   }
 }
