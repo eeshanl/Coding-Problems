@@ -27,7 +27,10 @@ public class removeDups {
    }
    
    public static void removeDups(Node front) {
-      
+      Node current = front;
+      while (current != null) {
+         current = current.next;
+      }
    }
    
    public static void printList(Node front) {
