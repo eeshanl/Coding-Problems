@@ -3,16 +3,16 @@
  */
 
 public class Palindrome {
-   
+
    public static void main (String[] args) {
-      String pal = "racecar";
+      String pal = "racecar"; // racecar is a common palindrome
       System.out.println("Is palindrome?: " + isPal(pal));
    }
-   
+
    public static boolean isPal(String s) {
       return isPal(s, 0, s.length() -1);
    }
-   
+
    private static boolean isPal(String s, int i, int j) {
       if (i >= j) {
          return true;
@@ -22,6 +22,6 @@ public class Palindrome {
          } else {
             return false;
          }
-      } 
+      }
    }
 }

@@ -1,5 +1,5 @@
 /* Eeshan Londhe
- * Program to reverse a C-Style string.
+ * Program to reverse a C-Style string in place.
  */
 
 #include <stdio.h>

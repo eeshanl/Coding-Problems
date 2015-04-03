@@ -25,14 +25,15 @@ public class removeDups {
       System.out.print("\nList without duplicates: ");
       printList(temp);
    }
-   
+
+   // Still working on this method. (incomplete)
    public static void removeDups(Node front) {
       Node current = front;
       while (current != null) {
          current = current.next;
       }
    }
-   
+
    public static void printList(Node front) {
       Node cur = front;
       System.out.print("[");
