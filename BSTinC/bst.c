@@ -3,14 +3,6 @@
 #include "bst.h"
 
 // Constructing a balanced BSTree from a sorted array.
-
-BSTNode* newNode(int data);
-BSTNode* buildTreeHelper(int nums[], int start, int end);
-BSTNode* buildTree(int nums[], int arrayLength);
-void preOrderTraversalPrint(BSTNode* root);
-void inOrderTraversalPrint(BSTNode* root);
-void postOrderTraversalPrint(BSTNode* root);
-
 int main() {
   int nums[] = {1, 2, 3, 4, 5, 6, 7};
   int arraylength = sizeof(nums)/sizeof(nums[0]);
