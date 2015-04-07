@@ -1,3 +1,3 @@
 # Binary Search Tree implementation in C
 * struct for BSTNode used
-* Recursivley built tree from sorted array using binary search to traverse the array. Used the middle of the array as root of the tree.
+* Recursively built tree from sorted array using binary search to traverse the array. Used the middle of the array as root of the tree.
