@@ -8,16 +8,15 @@ import java.io.*;
 public class StockCheck {
 
    public static void main(String[] args) throws FileNotFoundException {
-   	Scanner input = new Scanner(new File("stocks.txt"));
+   	  Scanner input = new Scanner(new File("stocks.txt"));
       int count = uniqueCount(input);
       System.out.println("Number of unique Stock abbreviations is: " + count);
    }
-   
+
    public static int uniqueCount(Scanner input) {
       HashSet<String> numOfStr = new HashSet<String>();
       int count = 0;
       while(input.hasNextLine()) {
-         total++;
          String line = input.nextLine().toLowerCase();
          String numOfLine = "";
          for (int i = 0; i < line.length(); i++) {
