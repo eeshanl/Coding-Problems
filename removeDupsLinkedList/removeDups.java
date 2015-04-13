@@ -22,6 +22,7 @@ public class removeDups {
       temp = temp.next;
       temp.next = new Node(5);
       temp = front;
+      
       System.out.print("List with duplicates: ");
       printList(temp);
       removeDups(temp);
@@ -29,29 +30,29 @@ public class removeDups {
       printList(temp);
    }
    
-   // removes duplicate items from list and maintains order
+   // Solution with o(n^2) complexity with no auxilary storage
+   //
+   // Removes duplicate items from list and maintains order
    public static void removeDups(Node front) {
       if (front.next != null) {
          Node current = front;
          Node check = front;
          Node prev = front;
          while(current != null) {
-            while(check.next != null && check.next.next != null) {
+            while(check.next != null) {
                if (check.next.data == current.data) {
                   check.next = check.next.next;
                } else {
                   check = check.next;
                }
             }
-            if (check.next != null && check.next.data == current.data){
-               check.next = check.next.next;
-            }
             current = current.next;
             check = current;
          }
       }
    }
-
+   
+   // Prints the linkedlist in order
    public static void printList(Node front) {
       Node cur = front;
       System.out.print("[");
