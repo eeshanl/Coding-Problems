@@ -1,3 +1,6 @@
+// Eeshan Londhe
+// Removes duplicate items from a linkedlist and maintains order.
+
 public class removeDups {
 
    public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class removeDups {
       temp = temp.next;
       temp.next = new Node(3);
       temp = temp.next;
-      temp.next = new Node(2);
+      temp.next = new Node(5);
       temp = front;
       System.out.print("List with duplicates: ");
       printList(temp);
@@ -25,23 +28,38 @@ public class removeDups {
       System.out.print("\nList without duplicates: ");
       printList(temp);
    }
-   // TODO
-   // Still working on this method. (incomplete)
+   
+   // removes duplicate items from list and maintains order
    public static void removeDups(Node front) {
-      Node current = front;
-      while (current != null) {
-         current = current.next;
+      if (front.next != null) {
+         Node current = front;
+         Node check = front;
+         Node prev = front;
+         while(current != null) {
+            while(check.next != null && check.next.next != null) {
+               if (check.next.data == current.data) {
+                  check.next = check.next.next;
+               } else {
+                  check = check.next;
+               }
+            }
+            if (check.next != null && check.next.data == current.data){
+               check.next = check.next.next;
+            }
+            current = current.next;
+            check = current;
+         }
       }
    }
 
    public static void printList(Node front) {
       Node cur = front;
       System.out.print("[");
-      while (cur.next.next != null) {
+      while(cur.next != null) {
          System.out.print(cur.data + ", ");
          cur = cur.next;
       }
-      System.out.println(cur.next.data + "]");
+      System.out.println(cur.data + "]");
    }
 
 }
