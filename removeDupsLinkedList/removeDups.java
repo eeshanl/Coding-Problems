@@ -37,7 +37,6 @@ public class removeDups {
       if (front.next != null) {
          Node current = front;
          Node check = front;
-         Node prev = front;
          while(current != null) {
             while(check.next != null) {
                if (check.next.data == current.data) {
