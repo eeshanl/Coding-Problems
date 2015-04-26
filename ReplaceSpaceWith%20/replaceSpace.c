@@ -25,7 +25,6 @@ void replaceSpace(char* str) {
     length++;
     strPtr++;
   }
-  printf("Original String: %s\n", str);
 
 
   int newLength = length + spaceCount * 2;
