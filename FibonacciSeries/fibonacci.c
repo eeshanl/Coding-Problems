@@ -1,7 +1,7 @@
 // Enter argument to ask user how many fibonacci numbers they want to print
 
-#include "stdio.h"
-#include "stdlib.h"
+#include "stdio.h" // printf & fprintf
+#include "stdlib.h" // for atoi
 
 void printFib(int n) {
   for (int i = 0; i < n; i++) {
@@ -17,7 +17,7 @@ void printFib(int n) {
     first = second;
     second = next;
   }
-}
+}a
 
 int main(int argc, char** argv) {
   if (argc < 2) {
