@@ -20,7 +20,6 @@ public class Palindrome {
       } else {
          if (s.charAt(i) == s.charAt(j)) {
             return true && isPal(s, i+1, j-1);
-            
          } else if (s.charAt(i) == ' ') {
             return isPal(s, i+1, j);
          } else if (s.charAt(j) == ' ') {
