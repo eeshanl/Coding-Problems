@@ -16,7 +16,6 @@ char* strCat(char* one, char* two) {
   while (*twoPtr) {
     *catPtr++ = *twoPtr++;
   }
-
   return cat;
 }
 
