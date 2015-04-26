@@ -11,14 +11,10 @@ char* strCat(char* one, char* two) {
   char* onePtr = one;
   char* twoPtr = two;
   while (*onePtr) {
-    *catPtr = *onePtr;
-    catPtr++;
-    onePtr++;
+    *catPtr++ = *onePtr++;
   }
   while (*twoPtr) {
-    *catPtr = *twoPtr;
-    catPtr++;
-    twoPtr++;
+    *catPtr++ = *twoPtr++;
   }
 
   return cat;
