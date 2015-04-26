@@ -1,2 +1,2 @@
-#Replace spaces
-Replaces all spaces in a string with "%20"
+# Replace spaces (in C)
+* Replaces all spaces in a string with "%20"

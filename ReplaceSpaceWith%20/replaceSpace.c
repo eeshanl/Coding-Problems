@@ -27,7 +27,6 @@ void replaceSpace(char* str) {
     length++;
     strPtr++;
   }
-
   int newLength = length + spaceCount * 2;
   str[newLength] = '\0';
   for (int i = length - 1; i >= 0; i--) {
