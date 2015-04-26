@@ -2,7 +2,7 @@
  * Program to reverse a C-Style string in place.
  */
 
-#include <stdio.h>
+#include <stdio.h> // for print
 
 void reverseString(char* str) {
   char* front = str;

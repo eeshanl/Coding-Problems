@@ -2,19 +2,7 @@
 // Replace spaces in a string with "%20"
 // Assumes string pased in is fewer thatn 100 chars
 
-#include "stdio.h"
-
-void replaceSpace(char* str);
-
-int main() {
-  // Give enough memory for 100 chars. Need to give extra memory because we don't
-  // know how many spaces there will be in the word.
-  char str[100] = {'R', 'e', 'p', 'l', 'a', 'c', 'e', ' ', 't', 'h', 'i', 's', '\0'};
-  printf("Original String: %s\n", str);
-  replaceSpace(str);
-  printf("Modified String: %s\n", str);
-  return 0;
-}
+#include "stdio.h" // for printf
 
 void replaceSpace(char* str) {
   int spaceCount = 0;
@@ -40,4 +28,14 @@ void replaceSpace(char* str) {
       newLength = newLength - 1;
     }
   }
+}
+
+int main() {
+  // Give enough memory for 100 chars. Need to give extra memory because we don't
+  // know how many spaces there will be in the word.
+  char str[100] = {'R', 'e', 'p', 'l', 'a', 'c', 'e', ' ', 't', 'h', 'i', 's', '\0'};
+  printf("Original String: %s\n", str);
+  replaceSpace(str);
+  printf("Modified String: %s\n", str);
+  return 0;
 }
