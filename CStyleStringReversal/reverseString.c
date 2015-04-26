@@ -4,16 +4,6 @@
 
 #include <stdio.h>
 
-void reverseString(char* str);
-
-int main(int argc, char** argv) {
-  char str[5] = "blah";
-  printf("Original string: %s\n", str);
-  reverseString(str);
-  printf("Reversed string: %s\n", str);
-  return 0;
-}
-
 void reverseString(char* str) {
   char* front = str;
   char* back = front;
@@ -26,4 +16,12 @@ void reverseString(char* str) {
     *front++ = *back;
     *back-- = backTemp;
   }
+}
+
+int main(int argc, char** argv) {
+  char str[5] = "blah";
+  printf("Original string: %s\n", str);
+  reverseString(str);
+  printf("Reversed string: %s\n", str);
+  return 0;
 }
