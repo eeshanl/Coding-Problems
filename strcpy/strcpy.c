@@ -26,10 +26,10 @@ char* strCopy2(const char* str) {
 }
 
 int main() {
-  //char str[20];
+  char str[20];
   char* word = "hello\0";
-  //strCopy(str, word);
-  char* string = strCopy2(word);
-  printf("%s\n", string);
-
+  strCopy(str, word);
+  char* str2 = strCopy2(word);
+  printf("%s\n", str);
+  printf("%s\n", str2);
 }
