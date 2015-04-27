@@ -1,6 +1,7 @@
 // Eeshan Londhe
 // My implementation of the stoi/atoi function in C.
-// Enter argument to represent number
+// Enter argument to represent number. Returns the integer corresponding to the
+// string entered. If a string that is not in the range of 0 - 9 is entered, returns -1.
 
 #include "stdio.h" // for printf
 
@@ -12,8 +13,7 @@ unsigned int stringToInteger(const char* strNum) {
       return -1;
     } else {
       num *= 10;
-      num += *ptr +'0' - 96;
-      ptr++;
+      num += *ptr++ +'0' - 96;
     }
   }
   return num;
