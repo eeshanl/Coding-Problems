@@ -1,5 +1,6 @@
 *.class*
 *.out
 *.project
+*.DS
 a.out
 autogit.sh
