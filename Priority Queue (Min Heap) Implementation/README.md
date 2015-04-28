@@ -14,3 +14,7 @@ Implemented Priority Queue interface with a Binary Min Heap. I represented the h
 * int percolateUp(int hole, int val)
 * int percolateDown(int hole, int val)
 * void resize()
+
+## Resources Used
+
+* [PowerPoint slides on Binary Min Heap]https://courses.cs.washington.edu/courses/cse373/15sp/lectures/lecture9.pdf) 
