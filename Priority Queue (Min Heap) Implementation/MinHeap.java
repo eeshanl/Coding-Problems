@@ -9,23 +9,28 @@ public class MinHeap implements PriorityQueue {
 	
 	public static final int DEFAULT_SIZE = 1000;
 	
+	// Constructs new MinHeap object
 	public MinHeap() {
 		this.heap = new int[DEFAULT_SIZE];
 		this.size = 0;
 	}
 	
+	// Returns true if minheap is empty, false otherwise.
 	public boolean isEmpty() {
 		return this.size == 0;
 	}
 
+	// returns the number of contents in the heap
 	public int size() {
 		return size;
 	}
 
+	// returns the minimum value in the heap
 	public int findMin() {
 		return heap[1];
 	}
 
+	// inserts the value passed into the heap
 	public void insert(int x) {
 		if (size == heap.length -1) {
 			resize();
@@ -35,18 +40,25 @@ public class MinHeap implements PriorityQueue {
 		heap[i] = x;
 	}
 
-	// TODO
+	// deletes the minimum value from the heap
 	public int deleteMin() {
 		if (isEmpty()) {
 			throw new EmptyPQException();
 		}
-		return 0;
+		int min = heap[1];
+		int hole = percolateDown(1,heap[size]);
+		heap[hole] = heap[size];
+		size--;
+		return min;
 	}
 
+	// makes the heap empty, contains 0 elements
 	public void makeEmpty() {
 		heap = new int[DEFAULT_SIZE];
+		size = 0;
 	}
 	
+	// percolate up
 	private int percolateUp(int hole, int val) {
 		while (hole > 1 && val < heap[hole/2]) {
 			heap[hole] = heap[hole/2];
@@ -56,10 +68,12 @@ public class MinHeap implements PriorityQueue {
 	}
 	
 	// TODO
+	// percolate down
 	private int percolateDown(int hole, int val) {
 		return hole;
 	}
 	
+	// resizes the array by doubling size
 	private void resize() {
 		int[] bigHeap = new int[(size - 1)*2];
 		for (int i = 0; i < heap.length; i++) {
