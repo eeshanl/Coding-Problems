@@ -67,9 +67,25 @@ public class MinHeap implements PriorityQueue {
 		return hole;
 	}
 	
-	// TODO
+	// TODO (might be done incorrectly, will fix soon)
 	// percolate down
 	private int percolateDown(int hole, int val) {
+		while (2*hole <= size) {
+			int left = 2*hole;
+			int right = left + 1;
+			int target = 0;
+			if (right > size || heap[left] < heap[right]) {
+				target = left;
+			} else { 
+				target = right;
+			}
+			if (heap[target] < val) {
+				heap[hole] = heap[target];
+				hole = target;
+			} else {
+				break;
+			}
+		}
 		return hole;
 	}
 	
