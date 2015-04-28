@@ -17,4 +17,4 @@ Implemented Priority Queue interface with a Binary Min Heap. I represented the h
 
 ## Resources Used
 
-* [PowerPoint slides on Binary Min Heap]https://courses.cs.washington.edu/courses/cse373/15sp/lectures/lecture9.pdf) 
+* [PowerPoint slides on Binary Min Heap](https://courses.cs.washington.edu/courses/cse373/15sp/lectures/lecture9.pdf) 
