@@ -1,7 +1,5 @@
-/**
- * Base interface for priority queue implementations for doubles. Throw
- * exceptions as appropriate.
- */
+// PriorityQueue interface
+
 public interface PriorityQueue {
     /**
      * Returns true if priority queue has no elements
@@ -48,5 +46,10 @@ public interface PriorityQueue {
      * Resets the priority queue to appear as not containing any elements.
      */
     public void makeEmpty();
+    
+    /**
+     * Returns String array representation of heap
+     */
+    public String toString();
 
 }

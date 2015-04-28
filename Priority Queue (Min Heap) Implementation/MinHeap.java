@@ -67,7 +67,6 @@ public class MinHeap implements PriorityQueue {
 		return hole;
 	}
 	
-	// TODO (might be done incorrectly, will fix soon)
 	// percolate down
 	private int percolateDown(int hole, int val) {
 		while (2*hole <= size) {
@@ -96,6 +95,20 @@ public class MinHeap implements PriorityQueue {
 			bigHeap[i] = heap[i];
 		}
 		heap = bigHeap;
+	}
+	
+	// returns String representing array of heap
+	public String toString() {
+		String str = "[";
+		for (int i = 1; i < size; i++) {
+			str += heap[i] + ", ";
+		}
+		if (isEmpty()) {
+			str += "]";
+		} else {
+			str += heap[size] + "]";
+		}
+		return str;
 	}
 
 }
