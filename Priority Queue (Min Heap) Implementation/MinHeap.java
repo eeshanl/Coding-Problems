@@ -14,27 +14,19 @@ public class MinHeap implements PriorityQueue {
 		this.size = 0;
 	}
 	
-	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
 		return this.size == 0;
 	}
 
-	@Override
 	public int size() {
-		// TODO Auto-generated method stub
 		return size;
 	}
 
-	@Override
 	public int findMin() {
-		// TODO Auto-generated method stub
 		return heap[1];
 	}
 
-	@Override
 	public void insert(int x) {
-		// TODO Auto-generated method stub
 		if (size == heap.length -1) {
 			resize();
 		}
@@ -43,18 +35,15 @@ public class MinHeap implements PriorityQueue {
 		heap[i] = x;
 	}
 
-	@Override
+	// TODO
 	public int deleteMin() {
-		// TODO Auto-generated method stub
 		if (isEmpty()) {
 			throw new EmptyPQException();
 		}
 		return 0;
 	}
 
-	@Override
 	public void makeEmpty() {
-		// TODO Auto-generated method stub
 		heap = new int[DEFAULT_SIZE];
 	}
 	
@@ -66,6 +55,7 @@ public class MinHeap implements PriorityQueue {
 		return hole;
 	}
 	
+	// TODO
 	private int percolateDown(int hole, int val) {
 		return hole;
 	}

@@ -9,3 +9,8 @@ Implemented Priority Queue interface with a binary min heap. I represented the h
 * void insert(int x)
 * int deleteMin()
 * void makeEmpty()
+
+<b>Helper Methods:</b>
+* int percolateUp(int hole, int val)
+* int percolateDown(int hole, int val)
+* void resize()
