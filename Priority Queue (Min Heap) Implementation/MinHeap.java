@@ -6,15 +6,15 @@
 public class MinHeap implements PriorityQueue {
 	private int[] heap;
 	private int size;
-	
+
 	public static final int DEFAULT_SIZE = 1000;
-	
+
 	// Constructs new MinHeap object
 	public MinHeap() {
 		this.heap = new int[DEFAULT_SIZE];
 		this.size = 0;
 	}
-	
+
 	// Returns true if minheap is empty, false otherwise.
 	public boolean isEmpty() {
 		return this.size == 0;
@@ -54,10 +54,9 @@ public class MinHeap implements PriorityQueue {
 
 	// makes the heap empty, contains 0 elements
 	public void makeEmpty() {
-		heap = new int[DEFAULT_SIZE];
 		size = 0;
 	}
-	
+
 	// percolate up
 	private int percolateUp(int hole, int val) {
 		while (hole > 1 && val < heap[hole/2]) {
@@ -66,7 +65,7 @@ public class MinHeap implements PriorityQueue {
 		}
 		return hole;
 	}
-	
+
 	// percolate down
 	private int percolateDown(int hole, int val) {
 		while (2*hole <= size) {
@@ -75,7 +74,7 @@ public class MinHeap implements PriorityQueue {
 			int target = 0;
 			if (right > size || heap[left] < heap[right]) {
 				target = left;
-			} else { 
+			} else {
 				target = right;
 			}
 			if (heap[target] < val) {
@@ -87,16 +86,16 @@ public class MinHeap implements PriorityQueue {
 		}
 		return hole;
 	}
-	
+
 	// resizes the array by doubling size
 	private void resize() {
-		int[] bigHeap = new int[(size - 1)*2];
+		int[] bigHeap = new int[heap.length*2];
 		for (int i = 0; i < heap.length; i++) {
 			bigHeap[i] = heap[i];
 		}
 		heap = bigHeap;
 	}
-	
+
 	// returns String representing array of heap
 	public String toString() {
 		String str = "[";
