@@ -24,8 +24,6 @@ public class Test {
 		System.out.println(minHeap);
 		minHeap.insert(5);
 		System.out.println(minHeap);
-		minHeap.insert(10);
-		System.out.println(minHeap);
 		minHeap.deleteMin();
 		System.out.println(minHeap);
 		minHeap.deleteMin();

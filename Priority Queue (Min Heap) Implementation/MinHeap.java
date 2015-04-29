@@ -6,7 +6,7 @@ public class MinHeap implements PriorityQueue {
 	private int[] heap;
 	private int size;
 
-	public static final int DEFAULT_SIZE = 1000;
+	public static final int DEFAULT_SIZE = 100;
 
 	// Constructs new MinHeap object
 	public MinHeap() {
