@@ -36,7 +36,14 @@ public class Test {
 		System.out.println(minHeap);
 		minHeap.deleteMin();
 		System.out.println(minHeap);
-		
+		minHeap.deleteMin();
+		System.out.println(minHeap);
+		minHeap.deleteMin();
+		System.out.println(minHeap);
+		minHeap.deleteMin();
+		System.out.println(minHeap);
+		minHeap.deleteMin();
+		System.out.println(minHeap);
 	}
 
 }

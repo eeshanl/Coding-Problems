@@ -2,7 +2,6 @@
  * PriorityQueue implemented with a Binary Min Heap
  */
 
-
 public class MinHeap implements PriorityQueue {
 	private int[] heap;
 	private int size;
@@ -11,7 +10,11 @@ public class MinHeap implements PriorityQueue {
 
 	// Constructs new MinHeap object
 	public MinHeap() {
-		this.heap = new int[DEFAULT_SIZE];
+		this(DEFAULT_SIZE);
+	}
+	
+	public MinHeap(int size) {
+		this.heap = new int[size];
 		this.size = 0;
 	}
 
