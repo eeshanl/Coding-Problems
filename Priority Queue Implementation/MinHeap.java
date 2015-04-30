@@ -1,5 +1,5 @@
 /** Eeshan Londhe
- * PriorityQueue implemented with a Binary Min Heap
+ *  PriorityQueue implemented with a Binary Min Heap
  */
 
 public class MinHeap implements PriorityQueue {
