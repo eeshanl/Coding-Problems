@@ -18,7 +18,7 @@ public class MinHeap implements PriorityQueue {
 		this.size = 0;
 	}
 
-	// Returns true if minheap is empty, false otherwise.
+	// Returns true if min heap is empty, false otherwise.
 	public boolean isEmpty() {
 		return this.size == 0;
 	}
