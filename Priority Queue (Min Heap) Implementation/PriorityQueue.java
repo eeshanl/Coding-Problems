@@ -23,7 +23,7 @@ public interface PriorityQueue {
      *             if priority queue contains no elements
      */
     public int findMin();
-
+    
     /**
      * Inserts a new element into the priority queue. Duplicate values ARE
      * allowed.
