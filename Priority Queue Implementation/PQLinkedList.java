@@ -2,7 +2,7 @@
  * PriorityQueue implemented with a Linked List
  */
 
-public class PQLinkedList {
+public class PQLinkedList implements PriorityQueue {
 	private Node front;
 	private int size;
 
@@ -64,7 +64,26 @@ public class PQLinkedList {
      *            element to be inserted into the priority queue.
      */
     public void insert(int x) {
-    	
+    	Node newNode = new Node(x);
+    	if (front == null) {
+    		front = newNode;
+    	} else {
+			if (front.data > x) {
+				Node temp = front;
+				front = newNode;
+				front.next = temp;
+			} else {
+	    		Node current = front.next;
+	    		Node prev = front;
+	    		while (current != null && x > current.data) {
+	    			prev = prev.next;
+	    			current = current.next;
+	    		}
+	    		prev.next = newNode;
+	    		newNode.next = current;
+			}
+		}
+    	size++;
     }
 
     /**
@@ -78,6 +97,7 @@ public class PQLinkedList {
 		if (isEmpty()) {
 			throw new EmptyPQException();
 		}
+		size--;
     	int value = front.data;
     	front = front.next;
     	return value;
@@ -95,13 +115,19 @@ public class PQLinkedList {
      * Returns String array representation of heap
      */
     public String toString() {
+        if (front == null) {
+        	return "[]";
+        }
         Node cur = front;
         String str = "[";
-        while(cur.next != null) {
-        	str += cur.data + ", ";
+        while(cur != null) {
+        	if(cur.next != null) {
+        		str += cur.data + ", ";
+        	} else {
+        		str += cur.data + "]";
+        	}
         	cur = cur.next;
         }
-        str += cur.data + "]";
         return str;
     }
 	
