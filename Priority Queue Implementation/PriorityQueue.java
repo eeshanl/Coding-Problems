@@ -48,7 +48,7 @@ public interface PriorityQueue {
     public void makeEmpty();
 
     /**
-     * Returns String array representation of heap
+     * Returns String array representation of PQ
      */
     public String toString();
 

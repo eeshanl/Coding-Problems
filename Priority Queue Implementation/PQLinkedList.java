@@ -112,7 +112,7 @@ public class PQLinkedList implements PriorityQueue {
     }
 
     /**
-     * Returns String array representation of heap
+     * Returns String array representation of linkedlist
      */
     public String toString() {
         if (front == null) {
