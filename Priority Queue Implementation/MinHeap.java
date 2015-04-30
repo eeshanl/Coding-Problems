@@ -1,4 +1,4 @@
-/* Eeshan Londhe
+/** Eeshan Londhe
  * PriorityQueue implemented with a Binary Min Heap
  */
 
@@ -8,27 +8,48 @@ public class MinHeap implements PriorityQueue {
 
 	public static final int DEFAULT_SIZE = 100;
 
-	// Constructs new MinHeap object
+    /**
+     * Constructs new PQLinkedList object with default size
+     *
+     */
 	public MinHeap() {
 		this(DEFAULT_SIZE);
 	}
 	
+    /**
+     * Constructs new PQLinkedList object with size value passed in
+     *
+     */
 	public MinHeap(int size) {
 		this.heap = new int[size];
 		this.size = 0;
 	}
 
-	// Returns true if min heap is empty, false otherwise.
+    /**
+     * Returns true if priority queue has no elements
+     *
+     * @return true if the priority queue has no elements
+     */
 	public boolean isEmpty() {
 		return this.size == 0;
 	}
 
-	// returns the number of contents in the heap
+    /**
+     * Returns the number of elements in this priority queue.
+     *
+     * @return the number of elements in this priority queue.
+     */
 	public int size() {
 		return size;
 	}
 
-	// returns the minimum value in the heap
+    /**
+     * Returns the minimum element in the priority queue
+     *
+     * @return the minimum element
+     * @throws EmptyPQException
+     *             if priority queue contains no elements
+     */
 	public int findMin() {
 		if (isEmpty()) {
 			throw new EmptyPQException();
@@ -36,7 +57,13 @@ public class MinHeap implements PriorityQueue {
 		return heap[1];
 	}
 
-	// inserts the value passed into the heap
+    /**
+     * Inserts a new element into the priority queue. Duplicate values ARE
+     * allowed.
+     *
+     * @param x
+     *            element to be inserted into the priority queue.
+     */
 	public void insert(int x) {
 		if (size == heap.length -1) {
 			resize();
@@ -46,7 +73,13 @@ public class MinHeap implements PriorityQueue {
 		heap[i] = x;
 	}
 
-	// deletes the minimum value from the heap
+    /**
+     * Removes and returns the minimum element from the priority queue.
+     *
+     * @return the minimum element
+     * @throws EmptyPQException
+     *             if priority queue contains no elements
+     */
 	public int deleteMin() {
 		if (isEmpty()) {
 			throw new EmptyPQException();
@@ -58,12 +91,16 @@ public class MinHeap implements PriorityQueue {
 		return min;
 	}
 
-	// makes the heap empty, contains 0 elements
+    /**
+     * Resets the priority queue to appear as not containing any elements.
+     */
 	public void makeEmpty() {
 		size = 0;
 	}
 
-	// percolate up
+    /**
+     * percolate up
+     */
 	private int percolateUp(int hole, int val) {
 		while (hole > 1 && val < heap[hole/2]) {
 			heap[hole] = heap[hole/2];
@@ -72,7 +109,9 @@ public class MinHeap implements PriorityQueue {
 		return hole;
 	}
 
-	// percolate down
+    /**
+     * percolate down
+     */
 	private int percolateDown(int hole, int val) {
 		while (2*hole <= size) {
 			int left = 2*hole;
@@ -93,7 +132,9 @@ public class MinHeap implements PriorityQueue {
 		return hole;
 	}
 
-	// resizes the array by doubling size
+    /**
+     * Resizes the array, by doubling size
+     */
 	private void resize() {
 		int[] bigHeap = new int[heap.length*2];
 		for (int i = 0; i < heap.length; i++) {
@@ -102,7 +143,9 @@ public class MinHeap implements PriorityQueue {
 		heap = bigHeap;
 	}
 
-	// returns String representing array of heap
+    /**
+     * Returns String array representation of PQ
+     */
 	public String toString() {
 		String str = "[";
 		for (int i = 1; i < size; i++) {

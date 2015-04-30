@@ -1,6 +1,6 @@
-// Eeshan Londhe
-// Testing code to check if my priority queue implementations work.
-
+/** Eeshan Londhe
+ * Testing code to test PQ implementations
+ */
 
 public class Test {
 

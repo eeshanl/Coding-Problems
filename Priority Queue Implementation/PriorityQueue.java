@@ -1,4 +1,6 @@
-// PriorityQueue interface
+/** Eeshan Londhe
+ *  PriorityQueue interface
+ */
 
 public interface PriorityQueue {
     /**
