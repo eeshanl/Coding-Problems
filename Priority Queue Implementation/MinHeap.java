@@ -30,6 +30,9 @@ public class MinHeap implements PriorityQueue {
 
 	// returns the minimum value in the heap
 	public int findMin() {
+		if (isEmpty()) {
+			throw new EmptyPQException();
+		}
 		return heap[1];
 	}
 

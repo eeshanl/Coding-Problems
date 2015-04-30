@@ -47,6 +47,9 @@ public class PQLinkedList {
      *             if priority queue contains no elements
      */
     public int findMin() {
+		if (isEmpty()) {
+			throw new EmptyPQException();
+		}
     	return front.data;
     }
     
@@ -72,6 +75,9 @@ public class PQLinkedList {
      *             if priority queue contains no elements
      */
     public int deleteMin() {
+		if (isEmpty()) {
+			throw new EmptyPQException();
+		}
     	int value = front.data;
     	front = front.next;
     	return value;
