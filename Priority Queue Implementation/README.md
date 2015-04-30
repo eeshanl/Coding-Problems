@@ -1,5 +1,6 @@
-# Priority Queue Implementation with Binary Min Heap
-Implemented Priority Queue interface with a Binary Min Heap. I represented the heap with an array.
+# Priority Queue Implementation
+
+Implemented Priority Queue interface with a Binary Min Heap. I represented the heap with an array. Also implemented it with a singly Linked List.
 
 ## Methods included:
 
