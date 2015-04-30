@@ -51,9 +51,7 @@ public class MinHeap implements PriorityQueue {
      *             if priority queue contains no elements
      */
 	public int findMin() {
-		if (isEmpty()) {
-			throw new EmptyPQException();
-		}
+		throwException();
 		return heap[1];
 	}
 
@@ -81,9 +79,7 @@ public class MinHeap implements PriorityQueue {
      *             if priority queue contains no elements
      */
 	public int deleteMin() {
-		if (isEmpty()) {
-			throw new EmptyPQException();
-		}
+		throwException();
 		int min = heap[1];
 		int hole = percolateDown(1,heap[size]);
 		heap[hole] = heap[size];
@@ -158,5 +154,14 @@ public class MinHeap implements PriorityQueue {
 		}
 		return str;
 	}
+	
+    /**
+     * Throws EmptyPQException if PQ is empty
+     */
+    private void throwException() {
+		if (isEmpty()) {
+			throw new EmptyPQException();
+		}
+    }
 
 }

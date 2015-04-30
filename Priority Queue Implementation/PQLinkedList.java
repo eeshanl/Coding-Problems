@@ -59,9 +59,7 @@ public class PQLinkedList implements PriorityQueue {
      *             if priority queue contains no elements
      */
     public int findMin() {
-		if (isEmpty()) {
-			throw new EmptyPQException();
-		}
+    	throwException();
     	return front.data;
     }
     
@@ -106,9 +104,7 @@ public class PQLinkedList implements PriorityQueue {
      *             if priority queue contains no elements
      */
     public int deleteMin() {
-		if (isEmpty()) {
-			throw new EmptyPQException();
-		}
+    	throwException();
 		size--;
     	int value = front.data;
     	front = front.next;
@@ -141,6 +137,15 @@ public class PQLinkedList implements PriorityQueue {
         	cur = cur.next;
         }
         return str;
+    }
+    
+    /**
+     * Throws EmptyPQException if PQ is empty
+     */
+    private void throwException() {
+		if (isEmpty()) {
+			throw new EmptyPQException();
+		}
     }
 	
 }

@@ -9,7 +9,7 @@ public class Test {
 		PriorityQueue minHeap = new PQLinkedList(); // PQ as min heap
 		
 		// heap
-		System.out.println("HEAP:\n\n\n");
+		System.out.println("MinHeap:\n\n\n");
 		System.out.println(minHeap);
 		minHeap.insert(5);
 		System.out.println(minHeap);
