@@ -1,23 +1,31 @@
+/* Eeshan Londhe
+ * PriorityQueue implemented with a Linked List
+ */
 
 public class PQLinkedList {
 	private Node front;
 	private int size;
 
+	// Private node class used for linked list.
 	private class Node {
 		private int data;
 		private Node next;
 		
+		// constructs a new Node object
 		public Node(int data) {
 			this.data = data;
 			this.next = null;
 		}
 	}
 	
+	// constructs a new PGLinkedList object
 	public PQLinkedList() {
 		front = null;
 		this.size = 0;
 	}
 	
+	
+	// Returns true if the list is empty, false otherwise.
 	public boolean isEmpty() {
 		return front == null;
 	}
