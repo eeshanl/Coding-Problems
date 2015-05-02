@@ -64,9 +64,6 @@ public class PQLinkedList implements PriorityQueue {
     }
     
     /**
-     * *** TODO ***
-     * 
-     * 
      * Inserts a new element into the priority queue. Duplicate values ARE
      * allowed.
      *
