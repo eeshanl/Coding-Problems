@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> // for printf
+#include <stdlib.h> // for malloc
 #include "bst.h"
 
 // Constructing a balanced BSTree from a sorted array.
