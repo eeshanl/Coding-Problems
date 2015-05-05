@@ -10,6 +10,7 @@ public class Palindrome {
       System.out.println("Is palindrome?: " + isPal(pal));
    }
 
+   // returns true if palindrome, false otherwise
    public static boolean isPal(String s) {
       return isPal(s, 0, s.length() -1);
    }
