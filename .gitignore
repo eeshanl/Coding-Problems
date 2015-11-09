@@ -2,5 +2,5 @@
 *.out
 *.project
 *.DS
-a.out
+a*
 autogit.sh

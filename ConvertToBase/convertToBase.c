@@ -19,8 +19,8 @@ int main(int argc, char** argv) {
 char* convertToBase(int num, int base) {
   const char num_key[16] = "0123456789abcdef";
   unsigned int unum = num;
-  char* binNum = (char*) malloc(sizeof(char) * 33);
   int digs = digits(unum, base);
+  char* binNum = (char*) malloc(sizeof(char) * (digs + 1));
   int x = digs;
   while (unum / base > 0) {
     binNum[digs - 1] = num_key[unum % base];
