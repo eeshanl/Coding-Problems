@@ -33,7 +33,7 @@ char* convertToBase(int num, int base) {
 }
 
 // Helper method to find how many digits are required to represent the number
-// in the base specified
+// in the base specified.
 int digits(unsigned int num, int base) {
   int i = 0;
   while (num / base > 0) {
