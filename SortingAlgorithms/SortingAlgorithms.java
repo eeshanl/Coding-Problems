@@ -1,4 +1,4 @@
-
+// List of a few sorting algorithms ive coded
 
 public class SortingAlgorithms {
 
