@@ -39,6 +39,5 @@ void strClean(char* str) {
       }
       *ptr2 = '\0';
     }
-
   }
 }
