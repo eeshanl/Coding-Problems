@@ -1,2 +1,3 @@
-# toLower (C)
-* Converts all uppercase letters to lower case in a string.
+# String ops (C)
+- toLower: converts all uppercase chars in a string to lower case
+- strClean: removes all non alphabetic characters from the string
