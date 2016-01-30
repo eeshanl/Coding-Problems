@@ -16,7 +16,7 @@ public class SwapLinkedList {
     cur = cur.next;
     cur.next = new Node(8);
     printLinkedList(front);
-    front = swap(1, 5, front);
+    front = swap(2, 3, front);
     printLinkedList(front);
   }
 
