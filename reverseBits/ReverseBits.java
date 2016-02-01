@@ -12,7 +12,7 @@ public class ReverseBits {
     }
   }
 
-  // returns the bit reversed number of x
+  // returns the bit reversed number of the input passed in
   public static int reverseBits(int x) {
     int y = x;
     Queue<Integer> q = new LinkedList<Integer>();
