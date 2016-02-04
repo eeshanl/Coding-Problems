@@ -41,8 +41,31 @@ public class Graph {
     System.out.println();
   }
 
-  public void printBottomUpBFS(int node) {
+  public LinkedList<LinkedList<Integer>> printBottomUpBFS(int node) {
+    LinkedList<LinkedList<Integer>> list = new LinkedList<LinkedList<Integer>>();
+    boolean[] visitedNodes = new boolean[numberOfNodes];
+    Queue<Integer> q = new LinkedList<Integer>();
+
+    int index = 0;
+    list.add(new LinkedList<Integer>());
+    list.get(index).add(index);
     
+    visitedNodes[node] = true;
+    q.add(node);
+    while (!q.isEmpty()) {
+      int num = q.remove();
+
+      for (int i = 0; i < adjacencyList[num].size(); i++) {
+        int temp = adjacencyList[num].get(i);
+
+        if (!visitedNodes[temp]) {
+          visitedNodes[temp] = true;
+          q.add(temp);
+        }
+      }
+    }
+    System.out.println();
+    return list;
   }
 
   public void printDFS(int node) {

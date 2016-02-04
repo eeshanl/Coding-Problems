@@ -13,10 +13,11 @@ public class GraphClient {
     graph.addEdge(3, 7);
     //graph.print();
     System.out.println();
-    System.out.print("BFS Traversal: ");
-    graph.printBFS(0);
+    //System.out.print("BFS Traversal: ");
+    //graph.printBFS(0);
     //System.out.print("DFS Traversal: ");
     //graph.printDFS(0);
+    System.out.println(graph.printBottomUpBFS(0));
   }
 
 }
