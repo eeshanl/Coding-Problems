@@ -4,12 +4,12 @@ public class SortingAlgorithms {
 
    public static void main(String[] args) {
       int[] array = new int[10];
-      array[0] = 5;
-      array[1] = 4;
+      array[0] = 2;
+      array[1] = 3;
       array[2] = 1;
       array[3] = 2;
-      array[4] = 3;
-      array[5] = 2;
+      array[4] = 4;
+      array[5] = 5;
       array[6] = 88;
       array[7] = 12;
       array[8] = 33;
@@ -25,9 +25,9 @@ public class SortingAlgorithms {
    public static void quickSort(int[] array, int lowerIndex, int higherIndex) {
       int i = lowerIndex;
       int j = higherIndex;
-      int pivot = array[lowerIndex+(higherIndex-lowerIndex)/2];
+      int pivot = array[(higherIndex+lowerIndex)/2];
       while (i <= j) {
-      
+         
          while (array[i] < pivot)
             i++;
          
@@ -43,10 +43,11 @@ public class SortingAlgorithms {
             j--;
          }
          
+         
       }
-      if (lowerIndex < j) 
+      if (lowerIndex < j)
          quickSort(array, lowerIndex, j);
-      if (higherIndex > i)   
+      if (higherIndex > i)
          quickSort(array, i, higherIndex);
    }
    
