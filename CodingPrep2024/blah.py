@@ -1,6 +1,52 @@
 from collections import defaultdict, deque
 from typing import List
 
+########################################################################################################################
+# Combine 2 sorted linkedlists
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+def mergeTwoLists(list1, list2):
+    if list1 == None:
+        return list2
+    if list2 == None:
+        return list1
+
+    p1 = list1
+    p2 = list2
+    temp = None
+    if p1.val < p2.val:
+        temp = p1
+        p1 = p1.next
+    else:
+        temp = p2
+        p2 = p2.next
+
+    while (p1 != None and p2 != None):
+        if p1.val < p2.val:
+            temp.next = p1
+            p1 = p1.next
+        else:
+            temp.next = p2
+            p2 = p2.next
+        temp = temp.next
+
+    if (p1 == None):
+        temp.next = p2
+    elif (p2 == None):
+        temp.next = p1
+
+    if list1.val < list2.val:
+        return list1
+    else:
+        return list2
+
+ 
+
+
 #######################################################################################################################
 # Two Sum
 
