@@ -25,6 +25,8 @@ def mergeTwoLists(list1, list2):
         temp = p2
         p2 = p2.next
 
+    rv = temp
+
     while (p1 != None and p2 != None):
         if p1.val < p2.val:
             temp.next = p1
@@ -39,12 +41,7 @@ def mergeTwoLists(list1, list2):
     elif (p2 == None):
         temp.next = p1
 
-    if list1.val < list2.val:
-        return list1
-    else:
-        return list2
-
- 
+    return rv
 
 
 #######################################################################################################################
